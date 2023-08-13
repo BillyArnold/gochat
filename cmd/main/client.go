@@ -5,6 +5,7 @@ import (
 	"log"
 	"net/http"
 	"time"
+	"fmt"
 
 	"github.com/gorilla/websocket"
 )
@@ -59,6 +60,9 @@ func ServeWs(wsServer *WsServer, w http.ResponseWriter, r *http.Request) {
 	}
 
 	client := newClient(conn, wsServer)
+
+	fmt.Println("New Client joined the hub!")
+	fmt.Println(client)
 	
     go client.writePump()
 	go client.readPump()

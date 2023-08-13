@@ -7,14 +7,16 @@
     <title>Go Chat App</title>
   </head>
   <body>
-      <form>
+      <form id="chat">
+        <label>Username</label>
+        <input type="text" id="chat_user" name="chat_user" />
         <label>Send Chat Message</label>
-        <input type="text" name="chat message" />
+        <input type="text" id="chat_message" name="chat_message" />
         <button type="submit">Send</button>
       </form>
 
-      <div id="chatmessages">
-        
+      <div id="chatMessages">
+
       </div>
 
     <script src="assets/app.js"></script>

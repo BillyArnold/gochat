@@ -19,7 +19,7 @@ func main() {
 	ServeWs(wsServer, w, r)
 	})
 
-	fs := http.FileServer(http.Dir("./../../"))
+	fs := http.FileServer(http.Dir("./"))
 	http.Handle("/", fs)
 
 	log.Fatal(http.ListenAndServe(*addr, nil))
